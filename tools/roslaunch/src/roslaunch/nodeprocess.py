@@ -1,3 +1,4 @@
+
 # Software License Agreement (BSD License)
 #
 # Copyright (c) 2008, Willow Garage, Inc.
@@ -100,7 +101,7 @@ def create_master_process(run_id, type_, ros_root, port, num_workers=NUM_WORKERS
 
     _logger.info("process[master]: launching with args [%s]"%args)
     log_output = False
-    return LocalProcess(run_id, package, 'master', args, os.environ, log_output, None)
+    return LocalProcess(run_id, package, 'master', args, os.environ, log_output, None, required=True)
 
 def create_node_process(run_id, node, master_uri):
     """
